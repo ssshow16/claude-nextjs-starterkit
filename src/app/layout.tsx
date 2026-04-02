@@ -14,8 +14,11 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Next.js Starter Kit",
-  description: "Next.js 15 + TypeScript + Tailwind CSS v4 + shadcn/ui",
+  title: {
+    default: 'NotionQuote — Notion 기반 견적서 웹 뷰어',
+    template: '%s — NotionQuote',
+  },
+  description: 'Notion 데이터베이스를 활용한 전문적인 견적서 생성 및 공유 서비스',
 };
 
 export default function RootLayout({
@@ -25,7 +28,7 @@ export default function RootLayout({
 }>) {
   return (
     <html
-      lang="en"
+      lang="ko"
       className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
     >
       <body className="min-h-full flex flex-col">
